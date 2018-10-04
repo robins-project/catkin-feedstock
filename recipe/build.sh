@@ -2,7 +2,7 @@
 mkdir build && cd build
 
 pip install empy
-pip install catkin_pkg
+pip install catkin-pkg
 
 cmake -G "Ninja"                            \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}        \
