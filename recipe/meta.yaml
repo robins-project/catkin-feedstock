@@ -1,0 +1,33 @@
+{% set name = "catkin" %}
+{% set version = "0.7.14" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: catkin-{{ version }}.tar.gz
+  url: https://github.com/ros/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: a41d8bc889e9e5558d4c9688f6916f306e01a65edd5024fbcf42e7e357522786
+
+build:
+    number: 0
+
+requirements:
+  build:
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+    - cmake
+    - ninja
+  host:
+    - gtest
+    - nose
+    - mkl-devel
+
+about:
+  home: http://docs.ros.org/api/catkin/html/
+  summary: Catkin is a collection of cmake macros and associated python code used to build some parts of ROS
+
+extra:
+  recipe-maintainers:
+    - v-turin
