@@ -19,10 +19,12 @@ requirements:
     - {{ compiler("cxx") }}
     - cmake
     - ninja
+    - python
   host:
     - gtest
     - nose
     - mkl-devel
+    - python
 
 about:
   home: http://docs.ros.org/api/catkin/html/
